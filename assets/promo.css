@@ -1,0 +1,18 @@
+/* ---- AI Software link + carousel (added 2026-11-20) ---- */
+.work-card h3 .card-link{color:inherit;text-decoration:none}
+.work-card h3 .card-link::after{content:"";position:absolute;inset:0;z-index:1}
+.work-card .inner-link{position:relative;z-index:2}
+.ai-carousel-link{display:block;color:inherit;text-decoration:none}
+.ai-carousel .slide{position:absolute;inset:0;display:grid;place-items:center;opacity:0;animation:aiSlide 15s infinite}
+.ai-carousel .slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left}
+.ai-carousel .slide:nth-child(n+2)::after{content:"";position:absolute;inset:auto 0 0;height:46px;background:linear-gradient(transparent,rgba(10,10,10,.88))}
+.ai-carousel .slide .product-type{z-index:2;color:#f4f1ea}
+.ai-carousel .s0{animation-name:aiSlide0}
+.ai-carousel .s1{animation-name:aiSlide1}
+.ai-carousel .s2{animation-name:aiSlide2}
+.ai-carousel .s3{animation-name:aiSlide3}
+@keyframes aiSlide0{0%,38%{opacity:1}43%,95%{opacity:0}100%{opacity:1}}
+@keyframes aiSlide1{0%,38%{opacity:0}43%,58%{opacity:1}63%,100%{opacity:0}}
+@keyframes aiSlide2{0%,58%{opacity:0}63%,78%{opacity:1}83%,100%{opacity:0}}
+@keyframes aiSlide3{0%,78%{opacity:0}83%,95%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.ai-carousel .slide{animation:none!important}.ai-carousel .s0{opacity:1}}
